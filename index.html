@@ -6,9 +6,6 @@
     <title>Lab2</title>
     <link rel="stylesheet" href="/css/style.css">
     <style>
-      html {
-        scroll-behavior: smooth;
-      }
 
       ::-webkit-scrollbar {
         width: 12px;
@@ -44,22 +41,22 @@
 
             <li class="ml-20">
               <a href="#" class="text-white lg:text-base  ">
-                <p class="text-xl hover:text-amber-300 transition-colors duration-300 xl:text-[27px] md:text-[20px] xs:text-[18px]sm:text-[20px]">NFT's</p>
+                <p class="text-xl hover:text-amber-300 transition-colors duration-300 xl:text-[25px] md:text-[20px] xs:text-[18px]sm:text-[20px]">NFT's</p>
               </a>
             </li>
             <li class="ml-20">
               <a href="#" class="text-white lg:text-base  ">
-                <p class="text-xl hover:text-amber-300 transition-colors duration-300 xl:text-[27px] md:text-[20px] xs:text-[18px]sm:text-[20px]">Stories</p>
+                <p class="text-xl hover:text-amber-300 transition-colors duration-300 xl:text-[25px] md:text-[20px] xs:text-[18px]sm:text-[20px]">Stories</p>
               </a>
             </li>
             <li class="ml-20">
-              <a href="#contacts" class="text-white lg:text-base  " >
-                <p class="text-xl hover:text-amber-300 transition-colors duration-300  xl:text-[27px] md:text-[20px] xs:text-[18px]sm:text-[20px]">Contact</p>
+              <a href="#" class="text-white lg:text-base  " >
+                <p class="text-xl hover:text-amber-300 transition-colors duration-300  xl:text-[25px] md:text-[20px] xs:text-[18px]sm:text-[20px]">Contact</p>
               </a>
             </li>
             <li class="ml-20">
               <a href="#" class="text-white lg:text-base  ">
-                <p class="text-xl hover:text-amber-300 transition-colors duration-300 xl:text-[27px] md:text-[20px] xs:text-[18px]sm:text-[20px]">About</p>
+                <p class="text-xl hover:text-amber-300 transition-colors duration-300 xl:text-[25px] md:text-[20px] xs:text-[18px]sm:text-[20px]">About</p>
               </a>
             </li>
           </ul>
@@ -70,28 +67,14 @@
     </div>
   </header>
 
-  <!-- <header
-      class="flex justify-between items-center p-4 border-b border-gray-700"
-    >
-      <div class="uppercase font-bold pl-[100px] pt-2 h-[50px]">
-        <a class="text-3xl text-white" href="">logo</a>
-      </div>
-      <nav>
-        <ul class="flex gap-10 space-x-4 pr-[60px] text-[20px]">
-          <li class="hover:cursor-pointer hover:text-gray-500 text-white">Topic 1</li>
-          <li class="hover:cursor-pointer hover:text-gray-500 text-white">Topic 2</li>
-          <li class="hover:cursor-pointer hover:text-gray-500 text-white">Topic 3</li>
-          <li class="hover:cursor-pointer hover:text-gray-500 text-white">Topic 4</li>
-        </ul>
-      </nav>
-    </header> -->
-
   <main>
 
-    <section class ="artists  ">
+    <section class ="artists"  id="artists">
 
-      <div class="artists__inner">
-        <div class="container ">
+      <div class="artists__inner" id ="artists__inner">
+        <div class="container " id="container">
+
+          <div class="count" id="count"></div>
 
           <ul class="artists__info xl:mt-[11rem] xl:grid xl:grid-cols-3 xl:gap-y-[30px] xl:ml-[13rem] md:grid md:grid-cols-2 md:gap-y-[20px] md:gap-[20px] sm:grid sm:grid-cols-2 sm:gap-[15px] sm:ml-[5rem] gap-y-[10px] mt-[2rem]  ">
             <li class="artist__item border border-white max-w-[294px] pb-[16px] transform transition-transform duration-300 hover:scale-110 xs:mt-[20px]">
@@ -176,7 +159,43 @@
           <img src="images/logo-header.svg" alt="background image">
         </a>
 
-        <ul class="footer__info xl:grid xl:grid-cols-2  xl:relative xl:left-[20%] xl:mt-[-21px]  md:left-[10%] md:grid-cols-2 md:grid md:relative md: mt-[21px] sm:-ml-[48px]">
+        <form action="#" class="main-form ml-[50px] grid grid-cols-2" id="main-form">
+          <div class="">
+            <label class="main-comment block text-white mt-[15px]" for="comments">Залиште ваш коментар...</label>
+            <input
+               class="form-comments-input block mt-[8px] px-[10px] py-[10px] border border-white bg-gray-500/50 placeholder-white text-white focus:outline-none"
+                
+                type="text"
+                placeholder="Ваш коментар"
+                id="comment"
+                name="comment">
+
+            <label class="main-email block text-white mt-[15px]" for="email">Залиште ваш email</label>
+            <input
+                class="form-comments-input block mt-[8px] px-[10px] py-[10px] border border-white bg-gray-500/50 placeholder-white text-white focus:outline-none"
+               
+                type="email"
+                placeholder="Ваш email"
+                id="email"
+                name="emails">
+          </div>
+          <div class="ml-[54px]">
+            <label for="dropdown" class="main-select block text-white mt-[15px]" >Оберіть малюнок:</label>
+            <select id="dropdown" class="form-select mt-[8px] px-[21px] py-[5px]  bg-gray-500/50 text-white border border-white rounded-[2px]" name="options">
+              <option value="" class="form-option" disabled selected>Вибрати</option>
+              <option value="images/select-1.jpeg" >фото-1</option>
+              <option value="images/select-2.jpeg" >фото-2</option>
+              <option value="images/select-3.jpeg">фото-3</option>
+
+            </select>
+
+            <button class="form-button block pt-[7px] pb-[9px] pr-[23px] pl-[23px] mt-[15px] text-white bg-black border border-white rounded-[6px]" type="submit" id="form-btn-one">
+          Відправити
+         </button>
+          </div>
+        </form>
+
+        <ul class="footer__info xl:grid xl:grid-cols-2  xl:relative xl:left-[10%] xl:mt-[-21px]  md:left-[10%] md:grid-cols-2 md:grid md:relative md: mt-[8px] sm:-ml-[48px]">
           <li class="ml-[30px]  mt-[20px] ">
             <a href="#" class="text-white  text-base  border-b-2 border-transparent hover:border-green-500 hover:border-dashed">Wave NFTs</a>
           </li>
@@ -197,7 +216,7 @@
           </li>
         </ul>
 
-        <div class="developer__form xl:flex xl:relative xl:left-[24%]  md:relative md:left-[24%] sm:left-[-34%] sm:relative ">
+        <div class="developer__form xl:flex xl:relative xl:left-[10%]  md:relative md:left-[24%] sm:left-[-34%] sm:relative ">
 
           <div class="developer xl:relative xl:left-[34%] sm:relative sm:left-[26%] md:relative md:left-[8%] xs:mt-[20px] xs:ml-[27px]">
             <p class="text-white text-base">Powered by Webflow</p>
