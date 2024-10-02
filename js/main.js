@@ -14,7 +14,7 @@ const parentDiv = document.createElement("div");
 parentDiv.style.display = "grid";
 parentDiv.style.gridTemplateColumns = "repeat(3, 3fr)";
 parentDiv.style.maxWidth = "1361px";
-parentDiv.style.marginLeft = "207px";
+parentDiv.style.marginLeft = "190px";
 
 const container = document.getElementById("container");
 container.appendChild(parentDiv);
@@ -48,6 +48,7 @@ formOfBtn.addEventListener("click", function (event) {
   newDiv.style.maxWidth = "294px";
   newDiv.style.height = "432px";
   newDiv.style.marginTop = "20px";
+  newDiv.style.marginLeft = "17px";
 
   let textNode = document.createElement("p");
   textNode.classList.add("comment");
