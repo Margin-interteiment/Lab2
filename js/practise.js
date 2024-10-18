@@ -1,3 +1,5 @@
+"use strict";
+
 // Виконання завдання №1
 
 (function InvokedFunc() {
@@ -30,7 +32,7 @@ console.log(`Загальна сума: ${multiplyAll(1, 3, 4)}`);
 
 const collectionOfSet = new Set([2, 4, 1, 2, 4, 6]);
 
-for (value of collectionOfSet) {
+for (const value of collectionOfSet) {
   console.log(`Set-колекція: ${value}`);
 }
 
